@@ -213,7 +213,12 @@ public class MyFlappyBird extends ApplicationAdapter {
             batch.end();
 
             if ((birdY > baseHt)) {
-                velocity += 2;
+                if(birdY < Gdx.graphics.getHeight()){
+                    velocity += 2;
+
+                } else {
+                    velocity = 5;
+                }
                 birdY -= velocity;
             } else {
                 gameState = 2;
