@@ -117,6 +117,7 @@ public class MyFlappyBird extends ApplicationAdapter {
 
         // Game Logic
         if (gameState == 1) {
+
             if (tubeX[scoringTube] < (float) Gdx.graphics.getWidth() / 2) {
                 score++;
                 Gdx.app.log("Score", String.valueOf(score));
@@ -127,7 +128,7 @@ public class MyFlappyBird extends ApplicationAdapter {
                 }
             }
             if (Gdx.input.justTouched()) {
-                velocity = -20;
+                velocity = -15;
             }
 
             for (int i = 0; i < tubeNum; i++) {
@@ -214,7 +215,7 @@ public class MyFlappyBird extends ApplicationAdapter {
 
             if ((birdY > baseHt)) {
                 if(birdY < Gdx.graphics.getHeight()){
-                    velocity += 2;
+                    velocity += 1;
 
                 } else {
                     velocity = 5;
